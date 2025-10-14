@@ -1,0 +1,428 @@
+/* --------------------------
+   Root Variables 
+   note: I should update it when I GET TO KNOW THAT I WANT DAMN!
+--------------------------- */
+:root {
+    --bg: #000000;
+    --fg: #ffffff;
+    --muted: rgba(255, 255, 255, 0.6);
+    --accent: #ffffff;
+    --accent-2: #aaaaaa;
+    --card: rgba(255, 255, 255, 0.03);
+    --mono: 'Fira Mono', monospace;
+}
+
+/* --------------------------
+   Global Styles
+--------------------------- */
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.brand .dot {
+    opacity: 0.6;
+    margin-left: 6px;
+}
+
+
+.nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--fg);
+}
+
+
+.hero {
+    padding: 48px 0;
+}
+
+.hero-title {
+    font-size: 36px;
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.hero-sub {
+    color: var(--muted);
+    margin: 0 0 18px;
+}
+
+.hero-cta .btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #000000;
+    border: none;
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    margin: 18px 0;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.small {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.chips {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chips li {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+.projects {
+    margin-top: 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.project-card:hover {
+    box-shadow: 0 6px 24px rgba(255, 255, 255, 0.1);
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.project-title {
+    font-family: var(--mono);
+    font-weight: 600;
+    color: var(--fg);
+}
+
+.project-tags {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+
+.snippet-preview {
+    background: #0b0b0b;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 120px;
+    overflow: auto;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    color: var(--fg);
+}
+
+.snippet-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-small {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: transparent;
+    color: var(--fg);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* --------------------------
+   Project Expansion
+--------------------------- */
+.desc {
+    margin-top: 10px;
+    color: var(--muted);
+    display: none;
+}
+
+.project-card.expanded .desc {
+    display: block;
+}
+
+.project-card.expanded .snippet-preview {
+    max-height: 220px;
+}
+
+/* --------------------------
+   Empty Cards
+--------------------------- */
+.empty-card {
+    background: linear-gradient(180deg, #0f0f0f, #0b0b0b);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--muted);
+}
+
+
+
+/* --------------------------
+   Footer
+--------------------------- */
+.site-footer {
+    padding: 20px 0;
+    color: var(--muted);
+    text-align: center;
+}
+
+
+/* --------------------------
+   Contact Block 
+--------------------------- */
+/* Typing AI message */
+.typing-message {
+    font-family: var(--mono);
+    color: #00ff228d;
+    font-size: 14px;
+    margin-bottom: 12px;
+    min-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: #dfecec;
+    width: 2px;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+/* blinking cursor */
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+.contact-block {
+    background: #070707;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    font-family: var(--mono);
+    color: var(--fg);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+    position: relative;
+}
+
+
+.contact-block h2 {
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.contact-block h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 60%;
+    background: linear-gradient(90deg, #03f9e97b, #00c3ffaf);
+    margin-top: 4px;
+    border-radius: 2px;
+}
+
+
+.contact-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease, fill 0.3s ease;
+    fill: white;
+}
+
+
+.social-link:hover {
+    background: linear-gradient(45deg, #00fff0, #00c3ff);
+    box-shadow: 0 0 12px #00fff0, 0 0 24px #00c3ff;
+}
+
+.social-link:hover svg {
+    transform: scale(1.2) rotate(10deg);
+    fill: black;
+}
+
+
+.contact-block a {
+    color: #00fff0;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.contact-block a:hover {
+    color: #00c3ff;
+}
+
+
+/* --------------------------
+   Responsive
+--------------------------- */
+@media (max-width: 540px) {
+    .hero-title {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 16px;
+    }
+}
+
+/* --------------------------
+   Reduced Motion
+--------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+/* Full-screen sections with scroll snapping
+ 
+*/
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+main.container {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+main.container > section {
+  height: 100vh; /* full viewport height */
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+
+.hero-title { font-size: 4vw; line-height: 1.2; }
+.hero-sub { font-size: 2vw; }
+@media(max-width:768px){
+  .hero-title { font-size: 6vw; }
+  .hero-sub { font-size: 3.5vw; }
+}
+
+#experimental-grid .project-card {
+  border: 1px solid rgba(0,255,200,0.3);
+  background: rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+#experimental-grid .project-card:hover {
+  transform: scale(1.03) rotate(-1deg);
+  box-shadow: 0 0 20px rgba(0,255,200,0.8), 0 0 40px rgba(0,255,200,0.4);
+}
+
+.project-card .ai-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,255,200,0.9);
+  color: black;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .ai-tooltip {
+  opacity: 1;
+}
+
+
+.project-card.fade-out { opacity: 0; transition: opacity 0.4s ease; }
+.project-card.fade-in { opacity: 1; transition: opacity 0.4s ease; }

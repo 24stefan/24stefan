@@ -1,0 +1,20 @@
+[
+  {
+    "title": "react-power-strap",
+    "snippet": "read -p ... USER_INPUT ...",
+    "lang": "bash",
+    "tags": ["web"],
+    "description": "React Power Strap is a Bash script that automates the process of creating a Vite-powered React project using either TypeScript or JavaScript templates. It also scaffolds basic folders and resets default files",
+    "github": "https://github.com/24stefan/react-power-strap.git"
+  },
+  
+  {
+    "title": "Get-Steam",
+    "snippet": "install_steam_package(){...}",
+    "lang": "bash",
+    "tags": ["linux"],
+    "description": "Script written to automate Steam installation on Arch.",
+    "github": "https://github.com/24stefan/get-steam.git"
+  }
+ 
+]

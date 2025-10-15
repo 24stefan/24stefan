@@ -44,8 +44,31 @@ body {
 
 
 .hero {
+    position: relative;
     padding: 48px 0;
+    overflow: hidden;
 }
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 80%;                /* only 80% width of the hero section */
+    height: 100%;
+    background: url("../pictures/images.jpg") left center / cover no-repeat;
+    filter: grayscale(100%) brightness(0.4);
+    opacity: 0.30;
+    transform: translateY(-50%); /* keeps it vertically centered */
+    z-index: 0;
+}
+
+/* keep text above the image */
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
 
 .hero-title {
     font-size: 36px;
@@ -90,7 +113,7 @@ body {
 }
 
 .small {
-    font-size: 13px;
+    font-size: 20px;
     color: var(--muted);
 }
 
@@ -426,3 +449,172 @@ main.container > section {
 
 .project-card.fade-out { opacity: 0; transition: opacity 0.4s ease; }
 .project-card.fade-in { opacity: 1; transition: opacity 0.4s ease; }
+
+p{
+    font-size: 24px;
+}
+h2{
+    font-size: 34px;
+}
+
+
+#skills-section {
+  padding: 60px 0;
+  text-align: center;
+  background: rgba(255,255,255,0.02);
+  position: relative;
+  overflow: hidden;
+}
+
+#skills-section .section-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: var(--fg);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.skill-card i {
+  font-size: 48px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.skill-card span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.skill-bar {
+  background: rgba(255, 255, 255, 0.08);
+  height: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.skill-bar .fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 8px;
+  transition: width 1.5s ease-out;
+}
+
+.skill-card.animated {
+  animation: floaty 3s ease-in-out infinite alternate;
+}
+@keyframes floaty {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+
+
+
+/* GitHub Stats Subsection */
+.github-stats {
+  margin-top: 80px;
+  text-align: center;
+  color: var(--fg);
+  animation: fadeIn 1s ease forwards;
+}
+
+.subsection-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Cards Layout */
+.stats-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+  max-width: 8000px;
+  margin: 0 auto;
+}
+
+/* Individual Card */
+.stats-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: floatIn 1s ease forwards;
+}
+
+.stats-card:nth-child(1) { animation-delay: 0.2s; }
+.stats-card:nth-child(2) { animation-delay: 0.4s; }
+.stats-card:nth-child(3) { animation-delay: 0.6s; }
+
+.stats-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.25);
+}
+
+/* Card Images */
+.stats-card img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.stats-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(50px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 900px) {
+  .stats-card img {
+    max-width: 340px;
+  }
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .stats-card img {
+    max-width: 300px;
+  }
+}
+

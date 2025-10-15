@@ -7,6 +7,9 @@
 <meta name="description" content="Stupid coder." />
 <meta name="theme-color" content="#0d0d0d" />
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
@@ -17,9 +20,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animation.css">
+
 </head>
 <body>
 
+<div id="preloader">
+  <div class="spinner"></div>
+</div>
 
 
 <main class="container">
@@ -32,6 +40,100 @@
     <a class="btn ghost" href="#about-section">about (read my excuses)</a>
   </div>
 </section>
+
+<section id="skills-section" class="skills animate__animated animate__fadeIn">
+  <h2 class="section-title">My Tools (aka coping mechanisms)</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card" data-skill="Bash" data-level="40">
+      <i class="devicon-bash-plain colored"></i>
+      <span>Bash</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-skill="JavaScript" data-level="70">
+      <i class="devicon-javascript-plain colored"></i>
+      <span>JavaScript</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-skill="C++" data-level="80">
+      <i class="devicon-cplusplus-plain colored"></i>
+      <span>C++</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-skill="C" data-level="40">
+      <i class="devicon-c-plain colored"></i>
+      <span>C</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-skill="Elixir" data-level="20">
+      <i class="devicon-elixir-plain colored"></i>
+      <span>Elixir</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-skill="SQLite" data-level="60">
+      <i class="devicon-sqlite-plain colored"></i>
+      <span>SQLite</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-skill="Arch Linux" data-level="45">
+      <i class="devicon-archlinux-plain colored"></i>
+      <span>Arch Linux</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-skill="Neovim" data-level="10">
+      <i class="devicon-neovim-plain colored"></i>
+      <span>Neovim</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+   
+    <div class="skill-card" data-skill="React" data-level="70">
+      <i class="devicon-react-original colored"></i>
+      <span>React</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-skill="Python" data-level="30">
+      <i class="devicon-python-plain colored"></i>
+      <span>Python</span>
+      <div class="skill-bar"><div class="fill"></div></div>
+    </div>
+
+  <div class="subsection github-stats">
+  <h3 class="subsection-title"></h3>
+  <div class="stats-cards">
+    <div class="stats-card">
+      <img src="https://github-readme-stats.vercel.app/api?username=24stefan&show_icons=true&theme=radical" alt="GitHub Stats">
+    </div>
+    <div class="stats-card">
+      <img src="https://github-readme-streak-stats.herokuapp.com?user=24stefan&theme=radical" alt="GitHub Streak">
+    </div>
+    <div class="stats-card">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=24stefan&layout=compact&theme=radical" alt="Top Languages">
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+   
+</section>
+
+  </div>
+</section>
+
+
+   
+</section>
+
 
 <section id="about-section" class="about card animate__animated animate__fadeInUp">
   <h2>About — or how i rationalize my commit messages</h2>
@@ -118,6 +220,72 @@ document.querySelectorAll('nav a').forEach(a=>{
     target.scrollIntoView({behavior:'smooth', block:'start'});
   });
 });
+
+
+// Preloader logic
+window.addEventListener("load", () => {
+  document.getElementById("preloader").classList.add("hidden");
+  document.body.classList.add("loaded");
+});
+
+// Fly-in animation on scroll
+const observer1 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll("main.container > section").forEach(sec => observer1.observe(sec));
+
+
+const skillCards = document.querySelectorAll(".skill-card");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const fill = entry.target.querySelector(".fill");
+      const level = entry.target.dataset.level;
+      fill.style.width = level + "%";
+      entry.target.classList.add("animated");
+    }
+  });
+}, { threshold: 0.3 });
+
+skillCards.forEach(card => observer.observe(card));
+
+
+async function fetchContribs(username) {
+  // Use a public proxy to bypass CORS
+  const proxy = "https://ghchart.rshah.org/";
+  // returns an SVG directly
+  const url = `${proxy}${username}`;
+  const res = await fetch(url);
+  const svgText = await res.text();
+  return svgText;
+}
+
+async function renderContribGraph(username) {
+  const wrapper = document.getElementById("github-contrib-graph");
+  const svgText = await fetchContribs(username);
+
+  // Insert the fetched SVG into DOM
+  wrapper.innerHTML = svgText;
+
+  // Optional: Animate each rect
+  const rects = wrapper.querySelectorAll("rect");
+  rects.forEach((r, i) => {
+    setTimeout(() => r.classList.add("visible"), i * 5); // stagger animation
+  });
+}
+
+// Call function
+renderContribGraph("24steefan");
+</script>
+
+
+
 </script>
 </body>
 </html>

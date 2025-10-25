@@ -1,4 +1,4 @@
-
+```
 #include <iostream>
 #include <string>
 using namespace std;
@@ -18,15 +18,13 @@ int main() {
     return 0;
 }
 
+```
 
-// GitHub Profile Stats
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=24stefan&show_icons=true&theme=dracula&hide_border=true)
 
-// Most Used Languages
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=24stefan&layout=compact&theme=dracula&hide_border=true)
 
-// Contribution Graph
 ![GitHub Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=24stefan&theme=dracula&hide_border=true)
 
-// Streaks
+
 ![GitHub Streak](https://streak-stats.demolab.com?user=24stefan&theme=dracula&hide_border=true)

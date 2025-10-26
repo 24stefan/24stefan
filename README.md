@@ -1,22 +1,18 @@
 ```
-#include <iostream>
-#include <string>
-using namespace std;
 
-int main() {
-    string name = "Stefan";
-    string role = "Occasional Coder | Student";
-    string motto = "Sometimes I write code, sometimes code writes me.";
 
-    cout << "👋 Hello, I'm " << name << "!" << endl;
-    cout << "💻 Role: " << role << endl;
-    cout << "💬 Motto: " << motto << endl;
 
-    cout << "\n// --- GitHub Statistics --- //" << endl;
-    cout << "📊 GitHub Mark Score, Languages, and Streak ↓" << endl;
+    std::string name = "Stefan";
+    std::string role = "Occasional Coder | Student";
+    std::string motto = "Sometimes I write code, most of the time I watch theprimeagen.";
 
-    return 0;
-}
+
+
+    std::cout << "\n// --- GitHub Statistics --- //" << endl;
+  
+
+    return expected_life_failure;
+
 
 ```
 

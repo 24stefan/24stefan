@@ -1,13 +1,13 @@
 # 24stefan  
 `backend / game dev`
 
----
+
 
 ## Contact
 [![Discord](https://skillicons.dev/icons?i=discord)](https://discord.com/users/meierlink24)
 [![Email](https://skillicons.dev/icons?i=gmail)](mailto:24s.stevanovic@gmail.com)
 
----
+
 
 
 
@@ -19,7 +19,7 @@
 [![Laravel](https://skillicons.dev/icons?i=laravel)]()
 [![JavaScript](https://skillicons.dev/icons?i=javascript)]()
 
----
+
 
 ## Cover  
 ![](./cover/cover.png)

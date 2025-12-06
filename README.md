@@ -11,17 +11,6 @@
 
 ---
 
-[![PHP](https://skillicons.dev/icons?i=php)]()
-[![Ruby](https://skillicons.dev/icons?i=ruby)]()
-[![C++](https://skillicons.dev/icons?i=cpp)]()
-[![Rust](https://skillicons.dev/icons?i=rust)]()
-[![Rails](https://skillicons.dev/icons?i=rails)]()
-[![Laravel](https://skillicons.dev/icons?i=laravel)]()
-[![JavaScript](https://skillicons.dev/icons?i=javascript)]()
-
-
-
----
 ![](./cover/cover.png)
 
 ---

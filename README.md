@@ -9,7 +9,7 @@
 
 
 
-
+---
 
 [![PHP](https://skillicons.dev/icons?i=php)]()
 [![Ruby](https://skillicons.dev/icons?i=ruby)]()
@@ -21,7 +21,7 @@
 
 
 
-## Cover  
+---
 ![](./cover/cover.png)
 
 ---

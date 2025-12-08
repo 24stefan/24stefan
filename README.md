@@ -4,11 +4,11 @@
 
 ---
 
-## Contact
-[![Discord](https://skillicons.dev/icons?i=discord)](https://discord.com/users/meierlink24)
-[![Email](https://skillicons.dev/icons?i=gmail)](mailto:24s.stevanovic@gmail.com)
+# 24stefan
 
----
+| Age | Location |
+|-----|----------|
+| 19yr| Serbia   |
 
 <img src="./cover/cover.png" width="100%"/>
 
@@ -26,13 +26,18 @@
 
 
 ---
+## 🧩 Projects
+
+| Name        | Description | Link |
+|------------|-------------|------|
+| **FeatherPHP** | Lightweight PHP framework built for speed | https://github.com/24stefan/featherphp |
+| **DarkWood** | 3D game engine in Ruby | https://github.com/24stefan/darkwood |
+
+        
 
 ## About Me  
 Backend specialist & game dev. Passionate about systems architecture, multiplayer frameworks and building scalable real-time applications.
 
----
 
-## GitHub Trophies  
-[![trophy](https://github-profile-trophy.vercel.app/?username=24stefan&theme=onedark&no-frame=true&no-bg=true)](https://github.com/24stefan/github-profile-trophy)
 
 ---

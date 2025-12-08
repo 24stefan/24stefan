@@ -1,31 +1,32 @@
-# 24stefan  
-`backend / game dev`
+<p align="center">
+  <img src="./cover/cover.png" width="800"/>
+</p>
 
 ---
 
-## Contact
+# 24stefan
+
+| Age | Location |
+|-----|----------|
+| 19yr| Serbia   |
+
+---
+
 [![Discord](https://skillicons.dev/icons?i=discord)](https://discord.com/users/meierlink24)
 [![Email](https://skillicons.dev/icons?i=gmail)](mailto:24s.stevanovic@gmail.com)
+[![Linkedin](https://skillicons.dev/icons?i=linkedin)](https://discord.com/users/meierlink24)
+
 
 ---
+## 🧩 Projects
+
+| Name        | Description | Link |
+|------------|-------------|------|
+| **FeatherPHP** | Lightweight PHP framework built for speed | https://github.com/24stefan/featherphp |
+| **DarkWood** | 3D game engine in Ruby | https://github.com/24stefan/darkwood |
+
+        
 
 
 
-[![PHP](https://skillicons.dev/icons?i=php)]()
-[![Ruby](https://skillicons.dev/icons?i=ruby)]()
-[![C++](https://skillicons.dev/icons?i=cpp)]()
-[![Rust](https://skillicons.dev/icons?i=rust)]()
-[![Rails](https://skillicons.dev/icons?i=rails)]()
-[![Laravel](https://skillicons.dev/icons?i=laravel)]()
-[![JavaScript](https://skillicons.dev/icons?i=javascript)]()
-
----
-
-## Cover  
-![](./cover/cover.png)
-
----
-
-## GitHub Trophies  
-[![trophy](https://github-profile-trophy.vercel.app/?username=24stefan&theme=onedark&no-frame=true&no-bg=true)](https://github.com/24stefan/github-profile-trophy)
 

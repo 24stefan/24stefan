@@ -14,7 +14,7 @@
 ## Tech Stack
 
 <div class="badges">
-  <img src="https://skillicons.dev/icons?i=ruby,cpp,rust,react, c, bash" height="38"/>
+  <img src="https://skillicons.dev/icons?i=ruby,cpp,rust, c, bash" height="38"/>
   <span>
   
   </span>

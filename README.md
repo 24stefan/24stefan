@@ -11,18 +11,9 @@
 
 ---
 
-## Tech Stack
-
-<div class="badges">
-  <img src="https://skillicons.dev/icons?i=ruby,cpp,rust, c, bash" height="38"/>
-  <span>
-  
-  </span>
-</div>
 
 
----
-## 🧩 Projects
+##  Projects
 
 | Name        | Description | Link |
 |------------|-------------|------|

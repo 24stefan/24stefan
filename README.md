@@ -1,7 +1,6 @@
 
-# 24stefan  
-`backend / game dev`
 
+<img src="./cover/cover.png" width="100%"/>
 ---
 
 # 24stefan
@@ -10,7 +9,6 @@
 |-----|----------|
 | 19yr| Serbia   |
 
-<img src="./cover/cover.png" width="100%"/>
 
 ---
 

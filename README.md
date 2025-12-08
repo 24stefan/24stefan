@@ -1,6 +1,5 @@
 
 
-<img src="./cover/cover.png" width="100%"/>
 ---
 
 # 24stefan
@@ -15,10 +14,9 @@
 ## Tech Stack
 
 <div class="badges">
-  <img src="https://skillicons.dev/icons?i=ruby,cpp,rust,go,javascript" height="38"/>
+  <img src="https://skillicons.dev/icons?i=ruby,cpp,rust,react, c, bash" height="38"/>
   <span>
-    <!-- Rotating framework icons as GIF. -->
-    <img src="https://github.com/24stefan/static-assets/blob/main/sinatra_rails_node.gif?raw=true" height="38" alt="Sinatra, Rails, Node - Rotating" />
+  
   </span>
 </div>
 
